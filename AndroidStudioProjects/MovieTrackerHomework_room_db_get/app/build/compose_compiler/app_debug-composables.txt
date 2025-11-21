@@ -1,10 +1,29 @@
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.EnterHomeScreen(
+  unstable navController: NavController
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MainActivity.BottomNavBar(
+  unstable navController: NavController
+  unused unstable <this>: MainActivity
+)
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MovieRecommendations(
-  state: MovieState
-  viewModel: MovieViewModel
+  unstable state: MovieState
+  unstable viewModel: MovieViewModel
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MovieDetails(
   stable search: String
 )
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.Share(
   stable movie: String
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.EnterMovieScreen(
+  unstable state: MovieState
+  stable onEvent: Function1<MovieEvent, Unit>
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MovieCard(
+  stable movie: Movie
+  stable onEvent: Function1<MovieEvent, Unit>
+)
+restartable skippable scheme("[0, [0]]") fun com.cs211d.movietracker.ui.theme.MovieTrackerTheme(
+  stable useDarkTheme: Boolean = @dynamic <expression>
+  stable content: Function2<Composer, Int, Unit>
 )

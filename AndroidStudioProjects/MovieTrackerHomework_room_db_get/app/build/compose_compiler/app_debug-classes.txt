@@ -1,0 +1,121 @@
+stable class com.cs211d.movietracker.MainActivity.BottomNavItem.Home {
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MainActivity.BottomNavItem.Search {
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MainActivity.BottomNavItem.Profile {
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MainActivity.BottomNavItem {
+  stable val route: String
+  stable val icon: ImageVector
+  stable val label: String
+  <runtime stability> = Stable
+}
+unstable class com.cs211d.movietracker.MainActivity {
+  unstable val db$delegate: Lazy<MovieDatabase>
+  unstable val viewModel$delegate: Lazy<MovieViewModel>
+  <runtime stability> = Unstable
+}
+stable class com.cs211d.movietracker.MovieEvent.SaveMovie {
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MovieEvent.SetMovieName {
+  stable val movieName: String
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MovieEvent.DeleteMovie {
+  stable val movie: Movie
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MovieEvent.ShowDialog {
+  <runtime stability> = Stable
+}
+stable class com.cs211d.movietracker.MovieEvent.HideDialog {
+  <runtime stability> = Stable
+}
+unstable class com.cs211d.movietracker.MovieState {
+  unstable val movies: List<Movie>
+  stable val movieName: String
+  stable val isAddingMovie: Boolean
+  <runtime stability> = Unstable
+}
+stable class com.cs211d.movietracker.data.Movie {
+  stable val id: Int?
+  stable val movieName: String
+  <runtime stability> = Stable
+}
+unstable class com.cs211d.movietracker.data.MovieDatabase {
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.model.MovieItem.MovieEntry {
+  stable var movieName: String
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.model.MovieItem {
+  stable var movieName: String
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.model.MovieUIState {
+  unstable val movie: MovieEntry?
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.network.Rating.$serializer {
+  unstable val descriptor: SerialDescriptor
+  <runtime stability> = Unstable
+}
+stable class com.cs211d.movietracker.network.Rating {
+  stable val Source: String
+  stable val Value: String
+  <runtime stability> = Stable
+}
+unstable class com.cs211d.movietracker.network.Movie.$serializer {
+  unstable val descriptor: SerialDescriptor
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.network.Movie {
+  stable val Title: String
+  stable val Year: String
+  stable val Rated: String
+  stable val Released: String
+  stable val Runtime: String
+  stable val Genre: String
+  stable val Director: String
+  stable val Writer: String
+  stable val Actors: String
+  stable val Plot: String
+  stable val Language: String
+  stable val Country: String
+  stable val Awards: String
+  stable val Poster: String
+  unstable val Ratings: List<Rating>
+  stable val Metascore: String
+  stable val imdbRating: String
+  stable val imdbVotes: String
+  stable val imdbID: String
+  stable val Type: String
+  stable val DVD: String
+  stable val BoxOffice: String
+  stable val Production: String
+  stable val Website: String
+  stable val Response: String
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.ui.theme.MovieViewModel {
+  runtime val dao: MovieDao
+  unstable val _state: MutableStateFlow<MovieState>
+  unstable val _movies: Flow<List<Movie>>
+  stable var currentMovie: String
+  stable var recommendedMovie: String
+  unstable val state: StateFlow<MovieState>
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.ui.theme.RecommendationsViewModel {
+  stable var menuChoice: Int
+  unstable val _uiState: MutableStateFlow<MovieUIState>
+  unstable val uiState: StateFlow<MovieUIState>
+  stable var currentMovie: String
+  stable var movieList: SnapshotStateList<String>
+  <runtime stability> = Unstable
+}
