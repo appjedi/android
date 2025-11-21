@@ -1,0 +1,10 @@
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MovieRecommendations(
+  state: MovieState
+  viewModel: MovieViewModel
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MovieDetails(
+  stable search: String
+)
+restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.Share(
+  stable movie: String
+)

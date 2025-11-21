@@ -1,0 +1,38 @@
+<resources>
+        <string name="app_name">Two Weeks of Italy</string>
+        <string name="top_bar_name">Two Weeks Preferences</string>
+
+        <string name="day1">Arrive Milan</string>
+        <string name="day2">Venice</string>
+        <string name="day3">Florence</string>
+        <string name="day4">Rome</string>
+        <string name="day5">Naples</string>
+        <string name="day6">Calabria</string>
+        <string name="day7">Tuscany</string>
+        <string name="day8">Bologna</string>
+        <string name="day9">Lake Como</string>
+        <string name="day10">Sardinia</string>
+        <string name="day11">the-amalfi-coast</string>
+        <string name="day12">Umbria</string>
+        <string name="day13">Sorrento</string>
+        <string name="day14">Puglia</string>
+
+        <string name="tip1">Milan is the financial, technology, business  capital of Italy</string>
+        <string name="tip2">Venice romantic gandola</string>
+        <string name="tip3">Florence home of the leaning tower of Pisa</string>
+        <string name="tip4">Rome old and history capitol of Italy</string>
+        <string name="tip5">Naples just north of pompei</string>
+        <string name="tip6">Mia Nonna e nata in Italia.  My grandmother was born in Calibria</string>
+        <string name="tip7">Tuscany</string>
+        <string name="tip8">Bologna</string>
+        <string name="tip9">Lake Como</string>
+        <string name="tip10">Sardinia</string>
+        <string name="tip11">the-amalfi-coast</string>
+        <string name="tip12">Umbria</string>
+        <string name="tip13">Sorrento</string>
+        <string name="tip14">Puglia</string>
+
+
+        <string name="grid_layout_toggle">Grid layout</string>
+        <string name="linear_layout_toggle">Linear layout</string>
+</resources>

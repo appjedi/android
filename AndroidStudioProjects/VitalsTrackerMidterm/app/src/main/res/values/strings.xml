@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Vitals Tracker</string>
+    <string name="date_field_label">Date Taken</string>
+    <string name="weight_field_label">Weight</string>
+    <string name="bp_systolic_field_label">Systolic</string>
+
+    <string name="bp_diastolic_field_label">Diastolic</string>
+    <string name="pulse_field_label">Pulse</string>
+
+    <string name="blood_sugar_field_label">Blood Sugar</string>
+
+    <string name="add_button_text">Add Vitals</string>
+    <string name="vitals_list_text">View Vitals</string>
+    <string name="welcome_instructions_text">Use this app to keep track of vitals you have seen.</string>
+    <string name="welcome">Welcome!</string>
+
+    <string name="home_button_text">Home</string>
+
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home_fragment">Home fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

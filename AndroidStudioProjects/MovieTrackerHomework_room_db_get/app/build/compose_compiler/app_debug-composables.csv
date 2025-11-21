@@ -1,0 +1,4 @@
+package,name,composable,skippable,restartable,readonly,inline,isLambda,hasDefaults,defaultsGroup,groups,calls,
+com.cs211d.movietracker.MovieRecommendations,MovieRecommendations,1,1,1,0,0,0,0,0,3,3,
+com.cs211d.movietracker.MovieDetails,MovieDetails,1,1,1,0,0,0,0,0,1,5,
+com.cs211d.movietracker.Share,Share,1,1,1,0,0,0,0,0,1,3,

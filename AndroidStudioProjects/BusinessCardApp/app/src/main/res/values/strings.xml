@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BusinessCardApp</string>
+    <string name="my_name">Bob Test</string>
+    <string name="my_title">Sr. Developer</string>
+
+    <string name="my_email">rtimlin@mail.ccsf.edu</string>
+    <string name="my_phone">415-555-1212</string>
+    <string name="my_website">www.timlin.net</string>
+
+</resources>

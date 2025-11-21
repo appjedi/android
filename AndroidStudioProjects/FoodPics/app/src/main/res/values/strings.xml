@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FoodPics</string>
+    <string name="food_type_fruit">Fruit</string>
+    <string name="food_type_vegetable">Vegetable</string>
+    <string name="food_color_orange">Orange</string>
+    <string name="food_color_green">Green</string>
+    <string name="food_color_other">Other</string>
+    <string name="food_cooked">Cooked</string>
+    <string name="food_raw">Raw</string>
+
+</resources>

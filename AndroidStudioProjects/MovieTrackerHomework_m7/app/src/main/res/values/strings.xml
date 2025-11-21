@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Movie Tracker</string>
+    <string name="movie_field_label">Movie Name</string>
+    <string name="add_button_text">Add to Movie List</string>
+    <string name="movie_recommendation_text">Movie Recommendation</string>
+    <string name="welcome_instructions_text">Use this app to keep track of movies you have seen.</string>
+    <string name="welcome">Welcome!</string>
+    <string name="enter_movies_button_text">Enter Movies</string>
+    <string name="home_button_text">Home</string>
+    <string name="make_recommendation">Recommended Movies:</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home_fragment">Home fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recommend_choose_from">You have %d to choose from</string>
+    <string name="no_recommend_to_choose_from">There are No recommended movies to choose from</string>
+
+    <string name="i_recommend_movie">I recommend %s movie</string>
+    <string name="recommended_movie">Recommended movie: %s </string>
+
+</resources>

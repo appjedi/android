@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="green">#FF008000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FFFF0000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add_button_text">Add to Movie List</string>
+    <string name="app_name">Movie Tracker</string>
+    <string name="enter_movies_button_text">Enter Movies</string>
+    <string name="home_button_text">Home</string>
+    <string name="i_recommend_movie">I recommend %s movie</string>
+    <string name="movie_detail_actors">Actors: %s</string>
+    <string name="movie_detail_plot">Plot: %s</string>
+    <string name="movie_detail_title">Title: %s</string>
+    <string name="movie_detail_year">Year: %s</string>
+    <string name="movie_field_label">Movie Name</string>
+    <string name="movie_recommendation_text">Movie Recommendation</string>
+    <string name="no_recommend_to_choose_from">There are No recommended movies to choose from</string>
+    <string name="recommend_choose_from">You have %d to choose from</string>
+    <string name="recommended_movie">Recommended movie: %s </string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_instructions_text">Use this app to keep track of movies you have seen.</string>
+    <style name="Theme.MovieTracker" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>
