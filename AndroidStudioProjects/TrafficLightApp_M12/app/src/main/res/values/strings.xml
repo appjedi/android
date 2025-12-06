@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrafficLightApp</string>
+    <string name="green">Go Go!</string>
+    <string name="yellow">Slow Down!</string>
+    <string name="red">Stop!</string>
+
+</resources>
