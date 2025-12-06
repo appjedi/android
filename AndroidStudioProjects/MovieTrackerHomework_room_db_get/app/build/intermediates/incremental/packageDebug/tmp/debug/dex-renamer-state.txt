@@ -1,17 +1,17 @@
-#Fri Nov 21 03:39:47 PST 2025
-base.0=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
-base.4=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
-base.5=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.6=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
-base.7=/Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Fri Nov 21 06:41:47 PST 2025
+base.0=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.4=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.5=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.6=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.7=C\:\\Users\\timli\\GitHub\\android\\AndroidStudioProjects\\MovieTrackerHomework_room_db_get\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
-path.2=1/classes.dex
-path.3=11/classes.dex
-path.4=15/classes.dex
+path.2=11/classes.dex
+path.3=15/classes.dex
+path.4=1/classes.dex
 path.5=3/classes.dex
 path.6=7/classes.dex
 path.7=classes2.dex
