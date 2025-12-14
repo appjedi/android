@@ -23,7 +23,7 @@ private val lightColorScheme= AppColorTheme(
     secondary = Color.Green,
     onSecondary = Color.LightGray,
 )
-
+/*
 @Composable
 fun AppTheme(
     isDarkTheme: Boolean= isSystemInDarkTheme(),
@@ -37,6 +37,8 @@ fun AppTheme(
 
     ) { }
 }
+*/
+
 
 object AppTheme{
     val colorScheme: AppColorTheme

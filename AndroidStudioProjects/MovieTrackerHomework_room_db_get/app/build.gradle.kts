@@ -12,7 +12,7 @@ plugins {
 
 android {
     namespace = "com.cs211d.movietracker"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.cs211d.movietracker"
@@ -79,6 +79,7 @@ dependencies {
     // Room
     implementation("androidx.room:room-runtime:2.7.0")
     implementation("androidx.room:room-ktx:2.7.0")
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     kapt("androidx.room:room-compiler:2.7.0")
 
@@ -90,6 +91,9 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.6")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3") // For coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+    // data store
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)

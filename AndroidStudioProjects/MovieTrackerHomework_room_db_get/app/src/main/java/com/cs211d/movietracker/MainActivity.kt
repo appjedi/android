@@ -1,5 +1,6 @@
 package com.cs211d.movietracker
 
+import android.R.attr.text
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,25 +8,37 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -33,8 +46,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
 import com.cs211d.movietracker.data.MovieDatabase
+import com.cs211d.movietracker.data.UserPreferences
 import com.cs211d.movietracker.ui.theme.MovieTrackerTheme
 import com.cs211d.movietracker.ui.theme.MovieViewModel
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     private val db by lazy {
@@ -44,6 +59,7 @@ class MainActivity : ComponentActivity() {
             "movies.db"
         ).build()
     }
+
     private val viewModel by viewModels<MovieViewModel>(
         factoryProducer = {
             object : ViewModelProvider.Factory {
@@ -63,6 +79,9 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             val navController= rememberNavController()
+            val dataStore = remember {
+                UserPreferences(this)
+            }
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){
                     EnterHomeScreen(navController)
@@ -82,6 +101,11 @@ class MainActivity : ComponentActivity() {
                     val state by viewModel.state.collectAsState()
                     MovieRecommendations(state=state, viewModel)
                 }
+                composable("preferences") {
+                    Preferences(dataStore)
+
+                }
+
             })
             BottomNavBar(navController)
 
@@ -91,11 +115,13 @@ class MainActivity : ComponentActivity() {
         object Home : BottomNavItem("home", Icons.Default.Home, "Home")
         object Search : BottomNavItem("tracker", Icons.Default.List, "Tracker")
         object Profile : BottomNavItem("recommendation", Icons.Default.ThumbUp, "Recommendation")
+        object Preferences : BottomNavItem("preferences", Icons.Default.Settings, "Preferences")
     }
 
     @Composable
     fun BottomNavBar(navController: NavController) {
-        val items = listOf(BottomNavItem.Home, BottomNavItem.Search, BottomNavItem.Profile)
+        val items = listOf(BottomNavItem.Home, BottomNavItem.Search, BottomNavItem.Profile,
+            BottomNavItem.Preferences)
         Box (modifier = Modifier.fillMaxSize()){
             Column(modifier = Modifier
                 .fillMaxSize()
@@ -120,7 +146,9 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
 }
+
 
 
 
