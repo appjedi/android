@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/APIService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/RetroClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/APIService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/APIService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRepository.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
