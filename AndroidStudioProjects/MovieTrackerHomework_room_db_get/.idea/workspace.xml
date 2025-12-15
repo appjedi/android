@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cs211d/movietracker/ui/theme/MovieViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cs211d/movietracker/ui/theme/MovieViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/data/VitalsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/data/VitalsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/ui/theme/VitalsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/ui/theme/VitalsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

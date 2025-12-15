@@ -27,18 +27,31 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.room.Room
+import net.timlin.vitalstracker.data.VitalsDatabase
+import net.timlin.vitalstracker.data.VitalsRepository
 import net.timlin.vitalstracker.ui.theme.VitalsTrackerTheme
 
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
 
 
 class MainActivity : ComponentActivity() {
+
+    private val db by lazy {
+        Room.databaseBuilder(
+            applicationContext,
+            VitalsDatabase::class.java,
+            "vitals.db"
+        ).build()
+    }
+    private lateinit var repository: VitalsRepository
     @SuppressLint("ViewModelConstructorInComposable")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        repository=  VitalsRepository(db.dao)
         setContent {
             //val VitalsList = remember{ mutableStateListOf<VitalsItem>()}
-            val viewModel: VitalsViewModel = VitalsViewModel()
+            val viewModel: VitalsViewModel = VitalsViewModel(repository)
             val navController= rememberNavController()
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){
