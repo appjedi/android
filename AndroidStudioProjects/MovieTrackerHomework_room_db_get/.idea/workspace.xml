@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cs211d/movietracker/PreferencesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cs211d/movietracker/PreferencesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
