@@ -1,7 +1,3 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.MainActivity.BottomNavBar(
-  unstable navController: NavController
-  unused unstable <this>: MainActivity
-)
 restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun com.cs211d.movietracker.Preferences(
   dataStore: UserPreferences
 )

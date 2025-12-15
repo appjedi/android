@@ -59,7 +59,6 @@ class MainActivity : ComponentActivity() {
             "movies.db"
         ).build()
     }
-
     private val viewModel by viewModels<MovieViewModel>(
         factoryProducer = {
             object : ViewModelProvider.Factory {
