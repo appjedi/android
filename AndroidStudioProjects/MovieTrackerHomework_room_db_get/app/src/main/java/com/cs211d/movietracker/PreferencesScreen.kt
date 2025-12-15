@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -37,7 +38,9 @@ fun Preferences(dataStore: UserPreferences)
     }
     //Text(text = name ?:"missing", fontSize = 32.sp)
     Column (
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
     ){
         Spacer(modifier = Modifier.height(12.dp))
         Text(text ="My Preferences:", fontSize = 32.sp)
