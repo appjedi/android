@@ -34,8 +34,4 @@ class UserPreferences (
             it[PrefKeys.EMAIL] = email
         }
     }
-
-
-
-
 }

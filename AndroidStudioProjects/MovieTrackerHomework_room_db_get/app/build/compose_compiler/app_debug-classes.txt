@@ -1,0 +1,12 @@
+unstable class com.cs211d.movietracker.data.UserPreferences.PrefKeys {
+  unstable val USERNAME: Key<String>
+  unstable val EMAIL: Key<String>
+  <runtime stability> = Unstable
+}
+unstable class com.cs211d.movietracker.data.UserPreferences {
+  unstable val context: Context
+  unstable val dataStore$delegate: ReadOnlyProperty<Context, DataStore<Preferences>>
+  unstable val username: Flow<String>
+  unstable val email: Flow<String>
+  <runtime stability> = Unstable
+}
