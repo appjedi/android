@@ -112,6 +112,7 @@ fun MovieRecommendations(state: MovieState,
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun MovieDetails(search: String)
 {

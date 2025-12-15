@@ -20,7 +20,7 @@ data class Rating(
 )
 
 @Serializable
-data class Movie(
+data class Movie2(
     val Title: String,
     val Year: String,
     val Rated: String,

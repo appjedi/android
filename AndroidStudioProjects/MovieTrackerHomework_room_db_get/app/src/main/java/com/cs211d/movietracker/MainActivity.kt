@@ -46,6 +46,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
 import com.cs211d.movietracker.data.MovieDatabase
+import com.cs211d.movietracker.data.MovieRepository
 import com.cs211d.movietracker.data.UserPreferences
 import com.cs211d.movietracker.ui.theme.MovieTrackerTheme
 import com.cs211d.movietracker.ui.theme.MovieViewModel
@@ -59,13 +60,14 @@ class MainActivity : ComponentActivity() {
             "movies.db"
         ).build()
     }
+    private lateinit var repository: MovieRepository
     private val viewModel by viewModels<MovieViewModel>(
         factoryProducer = {
             object : ViewModelProvider.Factory {
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     if (modelClass.isAssignableFrom(MovieViewModel::class.java)) {
                         @Suppress("UNCHECKED_CAST")
-                        return MovieViewModel(db.dao) as T
+                        return MovieViewModel(repository) as T
                     }
                     throw IllegalArgumentException("Unknown ViewModel class")
                 }
@@ -75,7 +77,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+        repository=  MovieRepository(db.dao)
+
         setContent {
             val navController= rememberNavController()
             val dataStore = remember {

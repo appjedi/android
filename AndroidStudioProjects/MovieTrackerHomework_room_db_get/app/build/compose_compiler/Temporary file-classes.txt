@@ -1,3 +1,0 @@
-stable class Generated_for_debugger_class {
-  <runtime stability> = Stable
-}

@@ -2,5 +2,14 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.kotlin.compose) apply false
+    //alias(libs.plugins.kotlin.compose) apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0" // this version matches your Kotlin version
+
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.21" // e.g., "1.9.22"
+
+}
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin:2.0.0")
+    }
 }

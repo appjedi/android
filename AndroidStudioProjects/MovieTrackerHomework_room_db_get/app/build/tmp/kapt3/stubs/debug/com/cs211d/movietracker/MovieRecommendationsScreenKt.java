@@ -10,6 +10,7 @@ public final class MovieRecommendationsScreenKt {
     com.cs211d.movietracker.ui.theme.MovieViewModel viewModel) {
     }
     
+    @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.O)
     @androidx.compose.runtime.Composable()
     public static final void MovieDetails(@org.jetbrains.annotations.NotNull()
     java.lang.String search) {

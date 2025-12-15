@@ -1,14 +1,20 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.navigation:navigation-common:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/51fd1f50629ff07655c2516694adf1c2/transformed/navigation-common-2.7.5/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/be7bb79dc1486ab7518e6c260f1793e3/transformed/navigation-runtime-2.7.5/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/c2f0f14211ba309a4d4e4dc7dfca34c3/transformed/navigation-common-ktx-2.7.5/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/bc80e7e573527f86130231e8240a90f8/transformed/navigation-runtime-ktx-2.7.5/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/eb2e5589be0f7d804777e46c9b897b40/transformed/navigation-compose-2.7.5/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.11.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/07540499891079658d653a42e5236d6f/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/e85da3b60c33da87b209272288da9d3c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/7436ca71b0aa5f0050e5c8f0f29a6f39/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/189c54ed0856467e74387ef2f7b186ad/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f2353cc4dbccedfe542e113360332ccb/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/roberttimlin/.gradle/caches/8.13/transforms/236644ac46c4cba34d05ef4fbf8c01f0/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.compose.material3:material3:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/ea34fca6425f4db632c4e3c57913349b/transformed/material3-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0639cf03bab4a736c445dd926ee3ffe3/transformed/ui-tooling-data/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/3ade42bc22951c39476cca9154844984/transformed/ui-tooling-preview/AndroidManifest.xml:17:1-22:12
@@ -25,24 +31,39 @@ MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/roberttimlin/.
 MERGED from [androidx.compose.material:material-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b2dd4eb1380aa21a1564ccc4b81564ec/transformed/material-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/61a2b041df4ccddac7306802cafe5bcc/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b5d39b437fa5bcb4ffead620c0c97cd6/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b34d9e4a6264c57a70bc6947b9de31b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/86fe67713ef52d0daa333035c6fa2fb7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/baa38e41bf132b5eccb983e146ba6649/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0a5ce2e1b64d705776777ac803345d53/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/494c9cb1e4d7e98d5c09b16cc17dc76f/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f9e5f7f8810e11cb87470ea6ffe99f09/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d8791c23a4fa2b95de4347e8efbdaa3b/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/63eeb9dadb61d6218acc554c3ce8f917/transformed/runtime-annotation/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/a6b418d7d56376948eff43a62cf82b05/transformed/runtime/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/896d371c0723df0b06ee7959001f2e58/transformed/runtime-saveable/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.savedstate:savedstate-compose-android:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/6ed7e1739d437776e95ce7ab593accb9/transformed/savedstate-compose/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/3ffaa2ce3687a44247fa2ece33f17ed4/transformed/savedstate-ktx-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/e6fe7f62ca7adf20b504a5c428686213/transformed/savedstate/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7d7b242993e79e0b87256650e10993dd/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d256474e53bdf1c92c88ed7c67eba8e2/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/16f87951ef3db9db8126d8371c21dd07/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/fc63dbaa8256ae43a99c9eeafc0a96e2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/5a54afe44412ad5b087081916872702a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9913d4b4475c3b66e22ca148b570d624/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f36d527955f34b8af4b799a842eeacbd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/96190201e3003967e53ab18b3be8db46/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/c8e58dcfaefb093a7a649a6600877eda/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a6dde8e7fd05405cacc383a783689f2/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0ff128f2e3cf3f6f9ad887d9422d0e44/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b8ac659967c22ecc00926ba796da614d/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/14bd358af2c9b406cb2d1d556d8c4ba5/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.core:core-ktx:1.15.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/445a8a285045c0f28556ac6f3389a303/transformed/core-ktx-1.15.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/1ba633cb000fb8b9d53e380fef03c48a/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core:1.15.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/62c4bf3b251bd967e326021e8cf22038/transformed/core-1.15.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/758eba10cd8217b988838f3f04173296/transformed/lifecycle-runtime/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7378e6d30f487e59132af1e5ee9a0a9e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/dde8d223fe0666b767344b90e02324ed/transformed/lifecycle-runtime-compose/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/2fa07bd9326da551814e908f79d63959/transformed/lifecycle-viewmodel-compose/AndroidManifest.xml:2:1-7:12
@@ -59,12 +80,17 @@ MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /Users/robe
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/dc4e05767d34ba890900fca3010ee3fc/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/e15e4146104399993494cbd8cc71556c/transformed/sqlite-framework-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d6f1c5f62831470790d9950c7fcb41ea/transformed/sqlite-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/66a6296e8361155c69275ac5a26c5231/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8ae3eef365b134450c7f20871e21a4b5/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/068304491992b7ef9d658ae892dbfd63/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a4bd30eaca38488c12221a21a9f83eb/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/588fbe2bd3c22282149044493e82accf/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bf0bdf1dad3110a0ecd327dfe05cbe68/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9e8155e0d5675922a6cd3259f661e956/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/d2f10ccad5f561c325ecec8ec3bd6886/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/2aec31b906b1e62e0f99a5af2485a237/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/669908035cb116bb22627b547fa380d5/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/89d70b76bc4df15fe22c97d793a006d6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
 	package
 		INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml
@@ -85,8 +111,12 @@ ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/Mo
 	android:name
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:5:22-76
 application
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:6:5-27:19
-INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:6:5-27:19
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:6:5-29:19
+INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:6:5-29:19
+MERGED from [com.google.android.material:material:1.11.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/07540499891079658d653a42e5236d6f/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/07540499891079658d653a42e5236d6f/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/7436ca71b0aa5f0050e5c8f0f29a6f39/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/7436ca71b0aa5f0050e5c8f0f29a6f39/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8c1883999792ec13deeaaa0a08c53a42/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8c1883999792ec13deeaaa0a08c53a42/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/494c9cb1e4d7e98d5c09b16cc17dc76f/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
@@ -110,43 +140,43 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/roberttimlin/.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/62c4bf3b251bd967e326021e8cf22038/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:15:9-35
 	android:label
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:11:9-41
 	android:fullBackupContent
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:9:9-54
 	android:roundIcon
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:15:9-29
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:10:9-43
 	android:allowBackup
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:7:9-35
 	android:theme
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:14:9-50
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:16:9-50
 	android:dataExtractionRules
 		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:8:9-65
 activity#com.cs211d.movietracker.MainActivity
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:16:9-26:20
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:18:9-28:20
 	android:label
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:19:13-45
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:21:13-45
 	android:exported
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:18:13-36
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:20:13-54
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:22:13-54
 	android:name
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:17:13-41
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/roberttimlin/Documents/GitHub/android/AndroidStudioProjects/MovieTrackerHomework_room_db_get/app/src/main/AndroidManifest.xml
@@ -161,6 +191,18 @@ MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/roberttiml
 MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/bc80e7e573527f86130231e8240a90f8/transformed/navigation-runtime-ktx-2.7.5/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/eb2e5589be0f7d804777e46c9b897b40/transformed/navigation-compose-2.7.5/AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-compose:2.7.5] /Users/roberttimlin/.gradle/caches/8.13/transforms/eb2e5589be0f7d804777e46c9b897b40/transformed/navigation-compose-2.7.5/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/07540499891079658d653a42e5236d6f/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/07540499891079658d653a42e5236d6f/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/e85da3b60c33da87b209272288da9d3c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/e85da3b60c33da87b209272288da9d3c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/7436ca71b0aa5f0050e5c8f0f29a6f39/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/7436ca71b0aa5f0050e5c8f0f29a6f39/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/189c54ed0856467e74387ef2f7b186ad/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/189c54ed0856467e74387ef2f7b186ad/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f2353cc4dbccedfe542e113360332ccb/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f2353cc4dbccedfe542e113360332ccb/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/roberttimlin/.gradle/caches/8.13/transforms/236644ac46c4cba34d05ef4fbf8c01f0/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/roberttimlin/.gradle/caches/8.13/transforms/236644ac46c4cba34d05ef4fbf8c01f0/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.compose.material3:material3:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/ea34fca6425f4db632c4e3c57913349b/transformed/material3-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.material3:material3:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/ea34fca6425f4db632c4e3c57913349b/transformed/material3-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0639cf03bab4a736c445dd926ee3ffe3/transformed/ui-tooling-data/AndroidManifest.xml:5:5-44
@@ -193,16 +235,20 @@ MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/rob
 MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/61a2b041df4ccddac7306802cafe5bcc/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b5d39b437fa5bcb4ffead620c0c97cd6/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b5d39b437fa5bcb4ffead620c0c97cd6/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b34d9e4a6264c57a70bc6947b9de31b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b34d9e4a6264c57a70bc6947b9de31b1/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/86fe67713ef52d0daa333035c6fa2fb7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/86fe67713ef52d0daa333035c6fa2fb7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/baa38e41bf132b5eccb983e146ba6649/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/baa38e41bf132b5eccb983e146ba6649/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0a5ce2e1b64d705776777ac803345d53/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0a5ce2e1b64d705776777ac803345d53/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/494c9cb1e4d7e98d5c09b16cc17dc76f/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/494c9cb1e4d7e98d5c09b16cc17dc76f/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f9e5f7f8810e11cb87470ea6ffe99f09/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f9e5f7f8810e11cb87470ea6ffe99f09/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d8791c23a4fa2b95de4347e8efbdaa3b/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d8791c23a4fa2b95de4347e8efbdaa3b/transformed/lifecycle-livedata-core-ktx-2.10.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/63eeb9dadb61d6218acc554c3ce8f917/transformed/runtime-annotation/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/63eeb9dadb61d6218acc554c3ce8f917/transformed/runtime-annotation/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.runtime:runtime-android:1.9.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/a6b418d7d56376948eff43a62cf82b05/transformed/runtime/AndroidManifest.xml:5:5-44
@@ -215,8 +261,32 @@ MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/roberttimlin/.grad
 MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/3ffaa2ce3687a44247fa2ece33f17ed4/transformed/savedstate-ktx-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/e6fe7f62ca7adf20b504a5c428686213/transformed/savedstate/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-android:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/e6fe7f62ca7adf20b504a5c428686213/transformed/savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f447eefcffdb149eb596d6cc8e499d1e/transformed/lifecycle-viewmodel-savedstate/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7d7b242993e79e0b87256650e10993dd/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7d7b242993e79e0b87256650e10993dd/transformed/lifecycle-livedata-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d256474e53bdf1c92c88ed7c67eba8e2/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d256474e53bdf1c92c88ed7c67eba8e2/transformed/lifecycle-viewmodel-2.10.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7735d2679481199a43fa7c232ec41e7e/transformed/lifecycle-viewmodel/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/16f87951ef3db9db8126d8371c21dd07/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/16f87951ef3db9db8126d8371c21dd07/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/fc63dbaa8256ae43a99c9eeafc0a96e2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/fc63dbaa8256ae43a99c9eeafc0a96e2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/5a54afe44412ad5b087081916872702a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/5a54afe44412ad5b087081916872702a/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9913d4b4475c3b66e22ca148b570d624/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9913d4b4475c3b66e22ca148b570d624/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f36d527955f34b8af4b799a842eeacbd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/f36d527955f34b8af4b799a842eeacbd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/96190201e3003967e53ab18b3be8db46/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/96190201e3003967e53ab18b3be8db46/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/c8e58dcfaefb093a7a649a6600877eda/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/c8e58dcfaefb093a7a649a6600877eda/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a6dde8e7fd05405cacc383a783689f2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a6dde8e7fd05405cacc383a783689f2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0ff128f2e3cf3f6f9ad887d9422d0e44/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/0ff128f2e3cf3f6f9ad887d9422d0e44/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b8ac659967c22ecc00926ba796da614d/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/b8ac659967c22ecc00926ba796da614d/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/14bd358af2c9b406cb2d1d556d8c4ba5/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
@@ -229,6 +299,8 @@ MERGED from [androidx.core:core:1.15.0] /Users/roberttimlin/.gradle/caches/8.13/
 MERGED from [androidx.core:core:1.15.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/62c4bf3b251bd967e326021e8cf22038/transformed/core-1.15.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/758eba10cd8217b988838f3f04173296/transformed/lifecycle-runtime/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/758eba10cd8217b988838f3f04173296/transformed/lifecycle-runtime/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9cabd0687e70b2311a5fdb4817ce79b6/transformed/lifecycle-livedata-core-2.10.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7378e6d30f487e59132af1e5ee9a0a9e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/7378e6d30f487e59132af1e5ee9a0a9e/transformed/lifecycle-viewmodel-ktx-2.10.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/dde8d223fe0666b767344b90e02324ed/transformed/lifecycle-runtime-compose/AndroidManifest.xml:5:5-44
@@ -261,8 +333,20 @@ MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/roberttimlin
 MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/e15e4146104399993494cbd8cc71556c/transformed/sqlite-framework-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d6f1c5f62831470790d9950c7fcb41ea/transformed/sqlite-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/d6f1c5f62831470790d9950c7fcb41ea/transformed/sqlite-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/66a6296e8361155c69275ac5a26c5231/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/66a6296e8361155c69275ac5a26c5231/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8ae3eef365b134450c7f20871e21a4b5/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8ae3eef365b134450c7f20871e21a4b5/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/068304491992b7ef9d658ae892dbfd63/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/068304491992b7ef9d658ae892dbfd63/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a4bd30eaca38488c12221a21a9f83eb/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/8a4bd30eaca38488c12221a21a9f83eb/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/588fbe2bd3c22282149044493e82accf/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/588fbe2bd3c22282149044493e82accf/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bf0bdf1dad3110a0ecd327dfe05cbe68/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bf0bdf1dad3110a0ecd327dfe05cbe68/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9e8155e0d5675922a6cd3259f661e956/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/9e8155e0d5675922a6cd3259f661e956/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/d2f10ccad5f561c325ecec8ec3bd6886/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
@@ -271,8 +355,6 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/roberttimlin/.gradle
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/roberttimlin/.gradle/caches/8.13/transforms/2aec31b906b1e62e0f99a5af2485a237/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/669908035cb116bb22627b547fa380d5/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/669908035cb116bb22627b547fa380d5/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/bacb0ada95ee3e11cd9afd612ff01102/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/89d70b76bc4df15fe22c97d793a006d6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] /Users/roberttimlin/.gradle/caches/8.13/transforms/89d70b76bc4df15fe22c97d793a006d6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
