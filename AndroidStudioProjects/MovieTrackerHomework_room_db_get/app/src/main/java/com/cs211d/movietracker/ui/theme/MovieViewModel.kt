@@ -7,6 +7,7 @@ import com.cs211d.movietracker.MovieEvent
 import com.cs211d.movietracker.MovieState
 import com.cs211d.movietracker.data.Movie
 import com.cs211d.movietracker.data.MovieDao
+import com.cs211d.movietracker.data.MovieRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
@@ -14,11 +15,11 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-class MovieViewModel(private val dao: MovieDao
+class MovieViewModel(private val repository: MovieRepository
 ) : ViewModel() {
 //    private val _movie
     private val _state = MutableStateFlow(MovieState())
-    private val _movies =dao.getMovies()
+    private val _movies =repository.getMovies()
     var currentMovie:String=""
     var recommendedMovie:String=""
     val state = combine(_state, _movies) { state, movies ->
@@ -48,7 +49,7 @@ class MovieViewModel(private val dao: MovieDao
                     return
                 }
                 val movie = Movie(movieName = movieName)
-                viewModelScope.launch { dao.save(movie) }
+                viewModelScope.launch { repository.save(movie) }
 
                 _state.update({it.copy(
                     isAddingMovie = false,
@@ -60,7 +61,7 @@ class MovieViewModel(private val dao: MovieDao
             }
 
             is MovieEvent.DeleteMovie -> {
-                viewModelScope.launch { dao.delete(event.movie) }
+                viewModelScope.launch { repository.delete(event.movie) }
 
             }
         }
