@@ -110,22 +110,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                     item.bpDiastolic,
                     item.bloodSugar
                 )
-                viewModelScope.launch {
-                    try {
-                        val result = apiRepository.postVitals(vitalRow)
-                        /*
-                        if (result.isSuccessful) {
-                            _response.postValue(result.body())
-                        } else {
-                            _response.postValue(null) // Handle API error
-                        }
-                        */
-
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                       // _response.postValue(null) // Handle network error
-                    }
-                }
+                getServerVitals()
             }
             is VitalsEvent.SetVitals->{
                 _state.update { it.copy(vitalsEntry = event.vitals) }
@@ -139,8 +124,9 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
     }
     fun getServerVitals()
     {
-        onEvent(VitalsEvent.GetVitals)
 
+        onEvent(VitalsEvent.GetVitals)
+        //return serverVitals
     }
     var vitalsList =  mutableStateListOf<VitalsItem>()
     private val _uiState = MutableStateFlow(VitalUIState())

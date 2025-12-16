@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import net.timlin.vitalstracker.data.VitalsEntry
 import net.timlin.vitalstracker.model.VitalsItem
+import net.timlin.vitalstracker.network.VitalsRow
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
 
 
@@ -52,6 +53,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
     var bpSystolic:Int by  remember { mutableIntStateOf(70) }
     var bloodSugar:Float by  remember { mutableFloatStateOf(90f) }
 
+   // val vitalsServer:List<VitalsRow> =
 
     //viewModel.setList(vitalsList)
     Column(
@@ -216,8 +218,6 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
         }
         Spacer(modifier = Modifier.height(24.dp))
 
-
-
     }
 }
 
@@ -225,10 +225,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
 @Composable
 fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
     val state by viewModel.state.collectAsState()
-    val list=state.vitals
-    for (item in list) {
-        println(item)
-    }
+    viewModel.getServerVitals()
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -243,9 +240,10 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
         var setShow=fun(idx:Int):Boolean{showDetails=idx
             return true
         }
+        val list=viewModel.serverVitals
         LazyColumn {
            //items(viewModel.getList()) { item ->
-           items(state.vitals) { item ->
+           items(list) { item ->
                 VitalsCard(
                     item = item, index==showDetails,
                     index,
@@ -254,6 +252,52 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
                 ++index
             }
         }
+    }
+}
+@Composable
+fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
+{
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+        ),
+    ) {
+        var showDetails: Boolean by remember {mutableStateOf(show)}
+
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+        ) {
+            Button(
+                onClick = {
+                    showDetails=!showDetails;
+                    setShow(idx)
+                    //viewModel.currentVitals=item
+                },
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 24.dp)
+            ) {
+                Column () {
+                    Text(
+                        text = item.toString(),
+                        fontSize = 24.sp
+                    )
+                }
+
+            }
+            if(showDetails)
+            {
+                Spacer(modifier = Modifier.height(8.dp))
+               // ViewVitals(item)
+
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
     }
 }
 @Composable

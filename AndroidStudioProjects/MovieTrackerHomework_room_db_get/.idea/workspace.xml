@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsTrackerScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsTrackerScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/data/VitalsEntry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/data/VitalsEntry.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/APIService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/APIService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/RetroClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/RetroClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/network/VitalsRow.kt" afterDir="false" />
-    </list>
+    <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
