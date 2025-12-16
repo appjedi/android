@@ -10,4 +10,9 @@ data class VitalsRow(
                         var pulse:Int,
                         var bpSystolic: Int, // TOP
                         var bpDiastolic: Int,// BOTTOM
-                        var bloodSugar: Float)
+                        var bloodSugar: Float){
+    override fun toString():String
+    {
+        return String.format("%s - %.2f", this.dateTaken,this.weight)
+    }
+}

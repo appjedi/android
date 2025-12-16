@@ -244,8 +244,8 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
             return true
         }
         LazyColumn {
-           items(viewModel.getList()) { item ->
-           // items(state.vitals) { item ->
+           //items(viewModel.getList()) { item ->
+           items(state.vitals) { item ->
                 VitalsCard(
                     item = item, index==showDetails,
                     index,
@@ -257,53 +257,7 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
     }
 }
 @Composable
-fun VitalsTest(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
-{
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-        ),
-    ) {
-        var showDetails: Boolean by remember {mutableStateOf(show)}
-
-        Column(
-            modifier = Modifier
-                .padding(16.dp)
-        ) {
-            Button(
-                onClick = {
-                    showDetails=!showDetails;
-                    setShow(idx)
-                    //viewModel.currentVitals=item
-                },
-                modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(bottom = 24.dp)
-            ) {
-                Column () {
-                    Text(
-                        text = item.toString(),
-                        fontSize = 24.sp
-                    )
-                }
-
-            }
-            if(showDetails)
-            {
-                Spacer(modifier = Modifier.height(8.dp))
-                //ViewVitals(item)
-
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-        }
-
-    }
-}
-@Composable
-fun VitalsCard(item: VitalsItem, show:Boolean,idx:Int,setShow:(Int)->Boolean)
+fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
 {
     Card(
         modifier = Modifier
@@ -349,7 +303,53 @@ fun VitalsCard(item: VitalsItem, show:Boolean,idx:Int,setShow:(Int)->Boolean)
     }
 }
 @Composable
-fun ViewVitals(item: VitalsItem)
+fun VitalsCard(item: VitalsItem, show:Boolean,idx:Int,setShow:(Int)->Boolean)
+{
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+        ),
+    ) {
+        var showDetails: Boolean by remember {mutableStateOf(show)}
+
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+        ) {
+            Button(
+                onClick = {
+                    showDetails=!showDetails;
+                    setShow(idx)
+                    //viewModel.currentVitals=item
+                },
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 24.dp)
+            ) {
+                Column () {
+                    Text(
+                        text = item.toString(),
+                        fontSize = 24.sp
+                    )
+                }
+
+            }
+            if(showDetails)
+            {
+                Spacer(modifier = Modifier.height(8.dp))
+             //   ViewVitals(item)
+
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
+    }
+}
+@Composable
+fun ViewVitals(item: VitalsEntry)
 {
     Row(
         modifier = Modifier

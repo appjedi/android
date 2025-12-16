@@ -9,7 +9,7 @@ import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
-// https://www.youtube.com/watch?v=sLuQbiNa040
+// Useful video https://www.youtube.com/watch?v=sLuQbiNa040
 interface ApiService {
     @Headers("Content-Type:application/json")
 
@@ -25,6 +25,7 @@ interface ApiService {
 
     @POST("api/vitals")
     suspend fun postVitals(@Body vital: VitalsRow):Response<VitalsRow>
+
     @PUT("api/vitals/{id}")
     suspend fun putVitals(@Path("id") id:Int,@Body vital: VitalsRow):Response<VitalsRow>
 }
