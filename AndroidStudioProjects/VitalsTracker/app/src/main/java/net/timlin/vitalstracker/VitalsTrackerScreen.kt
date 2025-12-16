@@ -240,10 +240,10 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
         var setShow=fun(idx:Int):Boolean{showDetails=idx
             return true
         }
-        val list=viewModel.getServerVitalsList()
+        val list=viewModel.serverVitals
         LazyColumn {
            //items(viewModel.getList()) { item ->
-           items(state.vitals) { item ->
+           items(list) { item ->
                 VitalsCard(
                     item = item, index==showDetails,
                     index,

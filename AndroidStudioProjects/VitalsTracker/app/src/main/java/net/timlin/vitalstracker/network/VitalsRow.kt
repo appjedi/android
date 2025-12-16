@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class VitalsRow(
-    val id:Int,
+    val id:Long,
                         var dateTaken: String,
                         var weight:Float,
                         var pulse:Int,

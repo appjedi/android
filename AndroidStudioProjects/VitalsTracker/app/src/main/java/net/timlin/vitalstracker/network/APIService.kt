@@ -16,13 +16,13 @@ interface ApiService {
     // header can go in each path as well.
     @GET("api/vitals")
     suspend fun getVitals(): Response<List<VitalsRow>>
-
+/*
     @GET("api/vitals/{id}")
     suspend fun getVital(@Path("id") id:String): Response<List<VitalsRow>>
 
     @GET("api/vitals")
     suspend fun getVitalsByQuery(@Query("range")range:String): Response<List<VitalsRow>>
-
+*/
     @POST("api/vitals")
     suspend fun postVitals(@Body vital: VitalsRow):Response<VitalsRow>
 

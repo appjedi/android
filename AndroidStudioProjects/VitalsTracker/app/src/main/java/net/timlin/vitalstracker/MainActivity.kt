@@ -70,6 +70,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             //val VitalsList = remember{ mutableStateListOf<VitalsItem>()}
             val viewModel: VitalsViewModel = VitalsViewModel(repository)
+            viewModel.fetchServerVitals()
             val navController= rememberNavController()
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){
@@ -91,8 +92,6 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxSize(),
                             color = MaterialTheme.colorScheme.background
                         ) {
-
-
                             EnterVitalsList(navController, viewModel)
                         }
                     }
