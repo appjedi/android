@@ -110,7 +110,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                     item.bpDiastolic,
                     item.bloodSugar
                 )
-                getServerVitals()
+                fetchServerVitals()
             }
             is VitalsEvent.SetVitals->{
                 _state.update { it.copy(vitalsEntry = event.vitals) }
@@ -122,7 +122,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
             }
         }
     }
-    fun getServerVitals()
+    fun fetchServerVitals()
     {
 
         onEvent(VitalsEvent.GetVitals)
@@ -157,7 +157,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
         currentEntry=entry
         onEvent(VitalsEvent.SetVitals(entry))
         onEvent(VitalsEvent.SaveVitals)
-        getServerVitals()
+        fetchServerVitals()
         //repository.save(entry)
         return true
         //updateItem(entree, previousEntree)
@@ -165,6 +165,9 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
     //Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework
 
     fun getList():List<VitalsItem> {return vitalsList}
-
+    fun getServerVitalsList():List<VitalsRow>?
+    {
+        return apiRepository.vitals
+    }
 
 }

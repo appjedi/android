@@ -3,10 +3,12 @@ package net.timlin.vitalstracker.network
 import net.timlin.vitalstracker.model.VitalsItem
 
 class VitalsRepository (){
+    var vitals:List<VitalsRow>?=null
      suspend fun fetchVitals(): Result<List<VitalsRow>> {
         return try {
             val response = RetrofitClient.apiService.getVitals()
             if (response.isSuccessful) {
+                this.vitals=response.body()
                 Result.success(response.body() ?: emptyList())
             } else {
                 Result.failure(Exception("Server error"))

@@ -225,7 +225,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
 @Composable
 fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
     val state by viewModel.state.collectAsState()
-    viewModel.getServerVitals()
+    viewModel.fetchServerVitals()
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -240,10 +240,10 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
         var setShow=fun(idx:Int):Boolean{showDetails=idx
             return true
         }
-        val list=viewModel.serverVitals
+        val list=viewModel.getServerVitalsList()
         LazyColumn {
            //items(viewModel.getList()) { item ->
-           items(list) { item ->
+           items(state.vitals) { item ->
                 VitalsCard(
                     item = item, index==showDetails,
                     index,
