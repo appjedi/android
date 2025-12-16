@@ -110,6 +110,21 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                     item.bpDiastolic,
                     item.bloodSugar
                 )
+                viewModelScope.launch {
+                    try {
+                        val result= apiRepository.postVitals(vitalRow)
+
+                        result.onSuccess { vitals ->
+                            // vitals is List<VitalsRow>
+
+                        }.onFailure { error ->
+                            print(error.message ?: "Unknown error")
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        // _response.postValue(null) // Handle network error
+                    }
+                }
                 fetchServerVitals()
             }
             is VitalsEvent.SetVitals->{
