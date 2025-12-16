@@ -10,5 +10,5 @@ sealed interface VitalsEvent {
     object ShowDialog:VitalsEvent
     object HideDialog:VitalsEvent
 
-
+    object GetVitals:VitalsEvent
 }

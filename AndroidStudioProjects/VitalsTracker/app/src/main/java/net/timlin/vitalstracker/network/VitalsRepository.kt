@@ -3,7 +3,7 @@ package net.timlin.vitalstracker.network
 import net.timlin.vitalstracker.model.VitalsItem
 
 class VitalsRepository (){
-     suspend fun fetchVitals(title:String): Result<List<VitalsRow>> {
+     suspend fun fetchVitals(): Result<List<VitalsRow>> {
         return try {
             val response = RetrofitClient.apiService.getVitals()
             if (response.isSuccessful) {

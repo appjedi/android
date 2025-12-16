@@ -86,4 +86,13 @@ dependencies {
 
     // ---------- COROUTINES ----------
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+
+    implementation("com.squareup.moshi:moshi:1.15.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+
+    // If using Retrofit
+    implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
+
+    // Optional (for @JsonClass code gen)
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.1")
 }

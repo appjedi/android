@@ -45,9 +45,14 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
         VitalsState())
     private val apiRepository: net.timlin.vitalstracker.network.VitalsRepository= net.timlin.vitalstracker.network.VitalsRepository()
     private var currentEntry: VitalsEntry?=null
+
+    var roomVitals=null
+    lateinit var serverVitals:List<VitalsRow>
+
     fun onEvent (event: VitalsEvent)
     {
         when(event){
+
             is VitalsEvent.HideDialog -> {
                 _state.update { it.copy(
                     isAddingVitals = false
@@ -57,6 +62,23 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                 _state.update { it.copy(
                     isAddingVitals = true
                 ) }
+            }
+            is VitalsEvent.GetVitals ->{
+                viewModelScope.launch {
+                    try {
+                        val result: Result<List<VitalsRow>> = apiRepository.fetchVitals()
+
+                        result.onSuccess { vitals ->
+                            // vitals is List<VitalsRow>
+                            serverVitals=vitals
+                        }.onFailure { error ->
+                            print(error.message ?: "Unknown error")
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        // _response.postValue(null) // Handle network error
+                    }
+                }
             }
             is VitalsEvent.SaveVitals ->{
                 val item=currentEntry//state.value.vitalsEntry
@@ -115,7 +137,11 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
             }
         }
     }
+    fun getServerVitals()
+    {
+        onEvent(VitalsEvent.GetVitals)
 
+    }
     var vitalsList =  mutableStateListOf<VitalsItem>()
     private val _uiState = MutableStateFlow(VitalUIState())
     val uiState: StateFlow<VitalUIState> = _uiState.asStateFlow()
@@ -145,6 +171,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
         currentEntry=entry
         onEvent(VitalsEvent.SetVitals(entry))
         onEvent(VitalsEvent.SaveVitals)
+        getServerVitals()
         //repository.save(entry)
         return true
         //updateItem(entree, previousEntree)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain>localhost:3001</domain>
+        <domain>10.0.2.2:8080</domain>
+        <domain>127.0.0.1</domain>
+        <domain>timlin.org</domain>
+    </domain-config>
+</network-security-config>
+
+
+
+
