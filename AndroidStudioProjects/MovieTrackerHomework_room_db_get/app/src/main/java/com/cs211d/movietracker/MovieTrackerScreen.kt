@@ -22,6 +22,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -50,6 +51,7 @@ fun EnterMovieScreen(
     var isError by remember {mutableStateOf(false)}
     var colorId by remember { mutableStateOf( R.color.black) }
     var colorMessage  =colorResource(id = colorId)
+    //val state by viewModel.state.collectAsState()
 
     Column(
         modifier = Modifier

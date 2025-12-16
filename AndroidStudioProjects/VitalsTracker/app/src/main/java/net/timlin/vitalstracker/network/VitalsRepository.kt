@@ -2,10 +2,10 @@ package net.timlin.vitalstracker.network
 
 import net.timlin.vitalstracker.model.VitalsItem
 
-class VitalsRepository (private val api: ApiService){
-    suspend fun fetchVitals(title:String): Result<List<VitalsRow>> {
+class VitalsRepository (){
+     suspend fun fetchVitals(title:String): Result<List<VitalsRow>> {
         return try {
-            val response = api.getVitals()
+            val response = RetrofitClient.apiService.getVitals()
             if (response.isSuccessful) {
                 Result.success(response.body() ?: emptyList())
             } else {
@@ -17,13 +17,14 @@ class VitalsRepository (private val api: ApiService){
     }
     suspend fun postVitals(vital: VitalsRow): Result<VitalsRow?> {
         return try {
-            val response = api.postVitals(vital)
+            val response = RetrofitClient.apiService.postVitals(vital)
             if (response.isSuccessful) {
                 Result.success(response.body())
             } else {
                 Result.failure(Exception("Server error"))
             }
         } catch (e: Exception) {
+            print(e.toString())
             Result.failure(e) // Network error / no internet
         }
     }

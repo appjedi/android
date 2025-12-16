@@ -18,6 +18,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -31,13 +32,14 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import net.timlin.vitalstracker.data.VitalsEntry
 import net.timlin.vitalstracker.model.VitalsItem
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun EnterVitalsScreen(navController: NavController, viewModel: VitalsViewModel) {
+fun EnterVitalsScreen(viewModel: VitalsViewModel) {
 
     var isError by remember {mutableStateOf(false)}
     var message:String by  remember {mutableStateOf("")}
@@ -196,7 +198,7 @@ fun EnterVitalsScreen(navController: NavController, viewModel: VitalsViewModel) 
                 item.pulse=pulse
                 item.weight=weight
                 item.bpDiastolic=bpDiastolic
-                item.bpSystolic
+                item.bpSystolic=bpSystolic
                 isError=!viewModel.addVitals(item)
                 if (!isError) {
                     message="Saved"
@@ -222,6 +224,11 @@ fun EnterVitalsScreen(navController: NavController, viewModel: VitalsViewModel) 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
+    val state by viewModel.state.collectAsState()
+    val list=state.vitals
+    for (item in list) {
+        println(item)
+    }
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -237,7 +244,8 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
             return true
         }
         LazyColumn {
-            items(viewModel.getList()) { item ->
+           items(viewModel.getList()) { item ->
+           // items(state.vitals) { item ->
                 VitalsCard(
                     item = item, index==showDetails,
                     index,
@@ -246,6 +254,52 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
                 ++index
             }
         }
+    }
+}
+@Composable
+fun VitalsTest(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
+{
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+        ),
+    ) {
+        var showDetails: Boolean by remember {mutableStateOf(show)}
+
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+        ) {
+            Button(
+                onClick = {
+                    showDetails=!showDetails;
+                    setShow(idx)
+                    //viewModel.currentVitals=item
+                },
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 24.dp)
+            ) {
+                Column () {
+                    Text(
+                        text = item.toString(),
+                        fontSize = 24.sp
+                    )
+                }
+
+            }
+            if(showDetails)
+            {
+                Spacer(modifier = Modifier.height(8.dp))
+                //ViewVitals(item)
+
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
     }
 }
 @Composable
