@@ -121,7 +121,8 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun BottomNavBar(navController: NavController) {
-        val items = listOf(BottomNavItem.Home, BottomNavItem.Search, BottomNavItem.Profile)
+        val items = listOf(BottomNavItem.Home, BottomNavItem.Search, BottomNavItem.Profile,
+            BottomNavItem.Preferences)
         Box (modifier = Modifier.fillMaxSize()){
             Column(modifier = Modifier
                 .fillMaxSize()

@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/HomeNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/HomeNavHost.kt" afterDir="false" />
-    </list>
+    <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
