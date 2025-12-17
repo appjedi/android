@@ -9,6 +9,7 @@ object RetrofitClient {
 
     //private val BASE_URL:String = "https://www.omdbapi.com/?apikey=7cfe23df&t="
     private val BASE_URL:String = "http://10.0.2.2:8080/"
+    //private val BASE_URL:String ="http://appjedi.net:3001/"
     //private val BASE_URL:String = "https://timlin.org/"
     val moshi = Moshi.Builder()
         .add(KotlinJsonAdapterFactory())
