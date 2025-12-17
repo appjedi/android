@@ -67,7 +67,7 @@ fun EnterHomeScreen( navController: NavController) {
                 .align(Alignment.CenterHorizontally)
                 .padding(bottom = 24.dp)
         ) {
-            Text(text = stringResource(R.string.add_button_text),
+            Text(text = stringResource(R.string.preferences),
                 fontSize = 24.sp)
         }
     }

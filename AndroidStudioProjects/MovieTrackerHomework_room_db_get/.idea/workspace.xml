@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81030920-432d-4e53-8057-8c34274420a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/PreferencesScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/HomeNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/HomeNavHost.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsTrackerScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/java/net/timlin/vitalstracker/VitalsTrackerScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VitalsTracker/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VitalsTracker/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
