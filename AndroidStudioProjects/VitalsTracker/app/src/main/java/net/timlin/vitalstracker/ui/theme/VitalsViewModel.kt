@@ -1,5 +1,7 @@
 package net.timlin.vitalstracker.ui.theme
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.withInfiniteAnimationFrameMillis
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateListOf
@@ -25,6 +27,7 @@ import net.timlin.vitalstracker.network.ApiService
 import net.timlin.vitalstracker.network.RetrofitClient
 import net.timlin.vitalstracker.network.VitalsRepository
 import net.timlin.vitalstracker.network.VitalsRow
+import net.timlin.vitalstracker.network.fetchVitals
 import java.io.File
 import kotlin.io.readText
 import kotlin.text.split
@@ -49,6 +52,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
     var roomVitals=null
     lateinit var serverVitals:List<VitalsRow>
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun onEvent (event: VitalsEvent)
     {
         when(event){
@@ -74,6 +78,8 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                         }.onFailure { error ->
                             print(error.message ?: "Unknown error")
                         }
+                       // val apiVitals: VitalsRow?= fetchVitals()
+                        //print (apiVitals)
                     } catch (e: Exception) {
                         e.printStackTrace()
                         // _response.postValue(null) // Handle network error
@@ -113,10 +119,8 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                 viewModelScope.launch {
                     try {
                         val result= apiRepository.postVitals(vitalRow)
-
                         result.onSuccess { vitals ->
                             // vitals is List<VitalsRow>
-
                         }.onFailure { error ->
                             print(error.message ?: "Unknown error")
                         }
@@ -133,7 +137,6 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
 
             is VitalsEvent.DeleteMovie -> {
                 viewModelScope.launch { repository.delete(event.vitals) }
-
             }
         }
     }

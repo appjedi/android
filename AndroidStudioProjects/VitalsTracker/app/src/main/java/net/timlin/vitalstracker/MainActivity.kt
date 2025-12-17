@@ -37,6 +37,8 @@ import androidx.room.Room
 import net.timlin.vitalstracker.data.UserPreferences
 import net.timlin.vitalstracker.data.VitalsDatabase
 import net.timlin.vitalstracker.data.VitalsRepository
+import net.timlin.vitalstracker.network.VitalsRow
+import net.timlin.vitalstracker.network.fetchVitals
 import net.timlin.vitalstracker.ui.theme.VitalsTrackerTheme
 
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
@@ -68,6 +70,7 @@ class MainActivity : ComponentActivity() {
     )
     @SuppressLint("ViewModelConstructorInComposable")
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         repository=  VitalsRepository(db.dao)
         setContent {

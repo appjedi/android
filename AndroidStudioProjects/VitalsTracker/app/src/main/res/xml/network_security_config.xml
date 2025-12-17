@@ -3,7 +3,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">10.0.2.2</domain>
         <domain>localhost:3001</domain>
-        <domain>appjedi.net:3001</domain>
+        <domain>appjedi.net</domain>
         <domain>10.0.2.2:8080</domain>
         <domain>127.0.0.1</domain>
         <domain>timlin.org</domain>
