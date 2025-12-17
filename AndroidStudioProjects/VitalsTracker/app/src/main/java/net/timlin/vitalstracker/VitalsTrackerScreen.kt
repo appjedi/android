@@ -292,7 +292,7 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
             if(showDetails)
             {
                 Spacer(modifier = Modifier.height(8.dp))
-               // ViewVitals(item)
+                ViewVitals(item)
 
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -338,7 +338,7 @@ fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
             if(showDetails)
             {
                 Spacer(modifier = Modifier.height(8.dp))
-                ViewVitals(item)
+               // ViewVitals(item)
 
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -393,7 +393,7 @@ fun VitalsCard(item: VitalsItem, show:Boolean,idx:Int,setShow:(Int)->Boolean)
     }
 }
 @Composable
-fun ViewVitals(item: VitalsEntry)
+fun ViewVitals(item: VitalsRow)
 {
     Row(
         modifier = Modifier

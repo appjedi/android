@@ -45,6 +45,8 @@ fun EnterHomeScreen( navController: NavController) {
             Text(text = stringResource(R.string.add_button_text),
                 fontSize = 24.sp)
         }
+        Spacer(modifier = Modifier.height(24.dp))
+
         Button(
             onClick = {
                 navController.navigate("history")
@@ -57,6 +59,16 @@ fun EnterHomeScreen( navController: NavController) {
                 fontSize = 24.sp)
         }
         Spacer(modifier = Modifier.height(24.dp))
-
+        Button(
+            onClick = {
+                navController.navigate("preferences")
+            },
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(bottom = 24.dp)
+        ) {
+            Text(text = stringResource(R.string.add_button_text),
+                fontSize = 24.sp)
+        }
     }
 }

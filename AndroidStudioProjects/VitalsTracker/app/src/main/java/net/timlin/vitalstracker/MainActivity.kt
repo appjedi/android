@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -20,6 +21,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -32,6 +34,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
+import net.timlin.vitalstracker.data.UserPreferences
 import net.timlin.vitalstracker.data.VitalsDatabase
 import net.timlin.vitalstracker.data.VitalsRepository
 import net.timlin.vitalstracker.ui.theme.VitalsTrackerTheme
@@ -72,6 +75,9 @@ class MainActivity : ComponentActivity() {
             val viewModel: VitalsViewModel = VitalsViewModel(repository)
             viewModel.fetchServerVitals()
             val navController= rememberNavController()
+            val dataStore = remember {
+                UserPreferences(this)
+            }
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){
                     EnterHomeScreen(navController)
@@ -96,6 +102,10 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 }
+                composable("preferences") {
+                    Preferences(dataStore)
+
+                }
             })
             BottomNavBar(navController)
         }
@@ -104,6 +114,9 @@ class MainActivity : ComponentActivity() {
         object Home : BottomNavItem("home", Icons.Default.Home, "Home")
         object Search : BottomNavItem("tracker", Icons.Default.List, "Tracker")
         object Profile : BottomNavItem("history", Icons.Default.ThumbUp, "History")
+        object Preferences : BottomNavItem("preferences", Icons.Default.Settings,
+            "Preferences")
+
     }
 
     @Composable
