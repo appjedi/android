@@ -21,6 +21,8 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 
 import androidx.compose.ui.Alignment
@@ -81,6 +83,8 @@ class MainActivity : ComponentActivity() {
             val dataStore = remember {
                 UserPreferences(this)
             }
+            val username by dataStore.username.collectAsState(initial = "")
+            Text("Welcome $username")
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){
                     EnterHomeScreen(navController)
@@ -124,6 +128,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun BottomNavBar(navController: NavController) {
+
         val items = listOf(BottomNavItem.Home, BottomNavItem.Search, BottomNavItem.Profile,
             BottomNavItem.Preferences)
         Box (modifier = Modifier.fillMaxSize()){
