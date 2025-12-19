@@ -225,7 +225,8 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
             try {
                 val result= apiRepository.deleteVitals(id)
                 result.onSuccess { vitals ->
-                    // vitals is List<VitalsRow>
+                    serverVitals=vitals
+                    //vitals is List<VitalsRow>
                 }.onFailure { error ->
                     print(error.message ?: "Unknown error")
                 }

@@ -32,11 +32,12 @@ class VitalsRepository (){
         }
     }
 
-    suspend fun deleteVitals(id: Long): Result<String?> {
+    suspend fun deleteVitals(id: Long): Result<List<VitalsRow>> {
         return try {
             val response = RetrofitClient.apiService.deleteVitals(id)
             if (response.isSuccessful) {
-                Result.success(response.body())
+                this.vitals=response.body()
+                Result.success(response.body() ?: emptyList())
             } else {
                 Result.failure(Exception("Server error"))
             }

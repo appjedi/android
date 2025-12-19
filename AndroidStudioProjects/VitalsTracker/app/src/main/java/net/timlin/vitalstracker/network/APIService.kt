@@ -31,5 +31,5 @@ interface ApiService {
     suspend fun putVitals(@Path("id") id:Int,@Body vital: VitalsRow):Response<VitalsRow>
 
     @DELETE("api/vitals/{id}")
-    suspend fun deleteVitals(@Path("id") id:Long):Response<String>
+    suspend fun deleteVitals(@Path("id") id:Long):Response<List<VitalsRow>>
 }
