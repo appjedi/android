@@ -1,6 +1,7 @@
 package net.timlin.vitalstracker.data
 
 import android.content.Context
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
@@ -14,6 +15,7 @@ class UserPreferences (
     object PrefKeys {
         val USERNAME = stringPreferencesKey("username")
         val EMAIL = stringPreferencesKey("email")
+        val LOCAL = booleanPreferencesKey("useLocal")
     }
     val Context.dataStore by preferencesDataStore(name = "user_preferences")
 
@@ -22,7 +24,8 @@ class UserPreferences (
 
     val email: Flow<String> = context.dataStore.data
         .map { it[PrefKeys.EMAIL] ?: "" }
-
+    val isLocal: Flow<Boolean> = context.dataStore.data
+        .map { it[PrefKeys.LOCAL] ?: false }
     suspend fun setName(username: String) {
         context.dataStore.edit {
             it[PrefKeys.USERNAME] = username
@@ -32,6 +35,12 @@ class UserPreferences (
     suspend fun setEmail(email: String) {
         context.dataStore.edit {
             it[PrefKeys.EMAIL] = email
+        }
+    }
+
+    suspend fun setLocal(local: Boolean) {
+        context.dataStore.edit {
+            it[PrefKeys.LOCAL] = local
         }
     }
 }

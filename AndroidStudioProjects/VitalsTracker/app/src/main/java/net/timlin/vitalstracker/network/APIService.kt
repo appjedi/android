@@ -3,6 +3,7 @@ package net.timlin.vitalstracker.network
 
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
@@ -28,4 +29,7 @@ interface ApiService {
 
     @PUT("api/vitals/{id}")
     suspend fun putVitals(@Path("id") id:Int,@Body vital: VitalsRow):Response<VitalsRow>
+
+    @DELETE("api/vitals/{id}")
+    suspend fun deleteVitals(@Path("id") id:Long):Response<String>
 }

@@ -1,10 +1,12 @@
 package net.timlin.vitalstracker
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -63,26 +65,31 @@ class MainActivity : ComponentActivity() {
                 override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     if (modelClass.isAssignableFrom(VitalsViewModel::class.java)) {
                         @Suppress("UNCHECKED_CAST")
-                        return VitalsViewModel(repository) as T
+                        return VitalsViewModel(repository, false ) as T
                     }
                     throw IllegalArgumentException("Unknown ViewModel class")
                 }
             }
         }
     )
+    @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("ViewModelConstructorInComposable")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         repository=  VitalsRepository(db.dao)
         setContent {
-            //val VitalsList = remember{ mutableStateListOf<VitalsItem>()}
-            val viewModel: VitalsViewModel = VitalsViewModel(repository)
-            viewModel.fetchServerVitals()
-            val navController= rememberNavController()
             val dataStore = remember {
                 UserPreferences(this)
             }
             val username by dataStore.username.collectAsState(initial = "")
+            val useLocal by dataStore.isLocal.collectAsState(initial = false)
+
+            //val VitalsList = remember{ mutableStateListOf<VitalsItem>()}
+            val viewModel: VitalsViewModel = VitalsViewModel(repository,useLocal)
+            viewModel.fetchServerVitals()
+            val navController= rememberNavController()
+
+
             Text("Welcome $username")
             NavHost(navController = navController, startDestination = "home", builder={
                 composable("home"){

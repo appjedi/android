@@ -4,8 +4,10 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.withInfiniteAnimationFrameMillis
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.datastore.core.DataStore
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import io.ktor.util.reflect.instanceOf
@@ -32,7 +34,7 @@ import java.io.File
 import kotlin.io.readText
 import kotlin.text.split
 
-class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.VitalsRepository) : ViewModel() {
+class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.VitalsRepository,private val useLocal:Boolean) : ViewModel() {
     var currentVitals: VitalsItem
         get() {return currentVitals}
         set(value) {currentVitals=value}
@@ -50,8 +52,9 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
     private var currentEntry: VitalsEntry?=null
 
     var roomVitals=null
-    lateinit var serverVitals:List<VitalsRow>
 
+    lateinit var serverVitals:List<VitalsRow>
+    fun getUseLocal():Boolean{return useLocal}
     @RequiresApi(Build.VERSION_CODES.O)
     fun onEvent (event: VitalsEvent)
     {
@@ -80,6 +83,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                         }
                        // val apiVitals: VitalsRow?= fetchVitals()
                         //print (apiVitals)
+
                     } catch (e: Exception) {
                         e.printStackTrace()
                         // _response.postValue(null) // Handle network error
@@ -135,11 +139,31 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
                 _state.update { it.copy(vitalsEntry = event.vitals) }
             }
 
-            is VitalsEvent.DeleteMovie -> {
-                viewModelScope.launch { repository.delete(event.vitals) }
+            is VitalsEvent.DeleteVitals -> {
+
+                viewModelScope.launch {
+                    repository.delete(event.vitals) }
+                /*
+                viewModelScope.launch {
+                    try {
+                        val result= apiRepository.deleteVitals(event.vitals.id)
+                        result.onSuccess { vitals ->
+                            // vitals is List<VitalsRow>
+                        }.onFailure { error ->
+                            print(error.message ?: "Unknown error")
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        // _response.postValue(null) // Handle network error
+                    }
+                }
+                fetchServerVitals()
+
+                 */
             }
         }
     }
+    @RequiresApi(Build.VERSION_CODES.O)
     fun fetchServerVitals()
     {
 
@@ -155,6 +179,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
     {
         vitalsList= ml as SnapshotStateList<VitalsItem>
     }
+    @RequiresApi(Build.VERSION_CODES.O)
     fun addVitals(item: VitalsItem?): Boolean {
         if (item ==null)
         {
@@ -181,7 +206,39 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
         //updateItem(entree, previousEntree)
     }
     //Users/roberttimlin/Documents/GitHub/clients/CCSF/CS211D/AndroidStudioProjects/MovieTrackerHomework
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun deleteVitals(item :VitalsEntry?):Boolean
+    {
+        if (item ==null)
+        {
+            return false;
+        }
 
+        onEvent(VitalsEvent.DeleteVitals(item))
+
+        return true;
+    }
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun deleteVitals(id :Long):Boolean
+    {
+        viewModelScope.launch {
+            try {
+                val result= apiRepository.deleteVitals(id)
+                result.onSuccess { vitals ->
+                    // vitals is List<VitalsRow>
+                }.onFailure { error ->
+                    print(error.message ?: "Unknown error")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                // _response.postValue(null) // Handle network error
+            }
+        }
+        fetchServerVitals()
+      //  onEvent(VitalsEvent.DeleteVitals(item))
+
+        return true;
+    }
     fun getList():List<VitalsItem> {return vitalsList}
     fun getServerVitalsList():List<VitalsRow>?
     {

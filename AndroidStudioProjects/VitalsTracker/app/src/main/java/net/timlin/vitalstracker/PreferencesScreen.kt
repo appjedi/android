@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,13 +31,16 @@ fun Preferences(dataStore: UserPreferences)
 
     val username by dataStore.username.collectAsState(initial = "")
     val email by dataStore.email.collectAsState(initial = "")
+    val isLocal by dataStore.isLocal.collectAsState(initial=false)
 
     var usernameText by remember { mutableStateOf(username) }
     var emailText by remember { mutableStateOf(email) }
+    var isLocalChecked by remember { mutableStateOf(isLocal) }
 
     if(usernameText.isEmpty() && emailText.isEmpty()) {
         usernameText = username
         emailText = email
+        isLocalChecked=isLocal
     }
     //Text(text = name ?:"missing", fontSize = 32.sp)
     Column (
@@ -60,13 +64,18 @@ fun Preferences(dataStore: UserPreferences)
             label = { Text("Email") },
             singleLine = true
         )
-
+        Spacer(modifier = Modifier.height(12.dp))
+        Checkbox(
+            checked=isLocalChecked,
+            onCheckedChange = {isLocalChecked = it}
+        )
         Spacer(modifier = Modifier.height(12.dp))
         Button (
             onClick = {
                 scope.launch {
                     dataStore.setName(usernameText)
                     dataStore.setEmail(emailText)
+                    dataStore.setLocal(isLocalChecked)
 
                 }
             }

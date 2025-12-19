@@ -1,5 +1,7 @@
 package net.timlin.vitalstracker
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,10 +11,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -38,6 +44,7 @@ import net.timlin.vitalstracker.network.VitalsRow
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
 
 
+@RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EnterVitalsScreen(viewModel: VitalsViewModel) {
@@ -221,11 +228,13 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
     val state by viewModel.state.collectAsState()
     viewModel.fetchServerVitals()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -237,25 +246,51 @@ fun EnterVitalsList(navController: NavController, viewModel: VitalsViewModel) {
             fontSize = 36.sp)
         Spacer(modifier = Modifier.height(24.dp))
         var index:Int=0
-        var setShow=fun(idx:Int):Boolean{showDetails=idx
+        val setShow=fun(idx:Int):Boolean{showDetails=idx
             return true
         }
-        val list=viewModel.serverVitals
+        val deleteEntry=fun (item: VitalsEntry):Boolean
+        {
+            viewModel.deleteVitals(item)
+            return true
+        }
+        val deleteRow=fun (item: VitalsRow):Boolean
+        {
+            val id:Long = item.id
+
+            return viewModel.deleteVitals(id)
+
+        }
         LazyColumn {
-           //items(viewModel.getList()) { item ->
-           items(list) { item ->
-                VitalsCard(
-                    item = item, index==showDetails,
-                    index,
-                    setShow=setShow
-                )
-                ++index
+           // val list = if (viewModel.getUseLocal()) viewModel.state.value.vitals else viewModel.serverVitals
+            if (viewModel.getUseLocal())
+            {
+                val list = state.vitals
+                items(list) { item ->
+                    VitalsCard(
+                        item = item, index==showDetails,
+                        index,
+                        setShow=setShow,deleteEntry
+                    )
+                    ++index
+                }
+            }else{
+                items(viewModel.serverVitals) { item ->
+                    VitalsCard(
+                        item = item, index==showDetails,
+                        index,
+                        setShow=setShow,deleteRow
+                    )
+                    ++index
+                }
             }
+           //items(viewModel.getList()) { item ->
+
         }
     }
 }
 @Composable
-fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
+fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean, deleteVitals:(VitalsRow)->Boolean)
 {
     Card(
         modifier = Modifier
@@ -267,7 +302,7 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
     ) {
         var showDetails: Boolean by remember {mutableStateOf(show)}
 
-        Column(
+        Row(
             modifier = Modifier
                 .padding(16.dp)
         ) {
@@ -278,16 +313,19 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
                     //viewModel.currentVitals=item
                 },
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
+                 //   .align(Alignment.CenterHorizontally)
                     .padding(bottom = 24.dp)
             ) {
-                Column () {
+
                     Text(
                         text = item.toString(),
                         fontSize = 24.sp
                     )
-                }
 
+
+            }
+            IconButton(onClick = {  deleteVitals(item) }) {
+                Icon(Icons.Default.Delete, contentDescription = null)
             }
             if(showDetails)
             {
@@ -301,7 +339,7 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean)
     }
 }
 @Composable
-fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
+fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean,deleteVitals:(VitalsEntry)->Boolean)
 {
     Card(
         modifier = Modifier
@@ -313,7 +351,7 @@ fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
     ) {
         var showDetails: Boolean by remember {mutableStateOf(show)}
 
-        Column(
+        Row(
             modifier = Modifier
                 .padding(16.dp)
         ) {
@@ -324,21 +362,24 @@ fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean)
                     //viewModel.currentVitals=item
                 },
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
+                    //   .align(Alignment.CenterHorizontally)
                     .padding(bottom = 24.dp)
             ) {
-                Column () {
-                    Text(
-                        text = item.toString(),
-                        fontSize = 24.sp
-                    )
-                }
 
+                Text(
+                    text = item.toString(),
+                    fontSize = 24.sp
+                )
+
+
+            }
+            IconButton(onClick = {  deleteVitals(item) }) {
+                Icon(Icons.Default.Delete, contentDescription = null)
             }
             if(showDetails)
             {
                 Spacer(modifier = Modifier.height(8.dp))
-               // ViewVitals(item)
+                ViewVitals(item)
 
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -401,6 +442,36 @@ fun ViewVitals(item: VitalsRow)
             .padding(16.dp),
 
     ) {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+        ) {
+            Text(text =String.format(stringResource(id=R.string.dateTaken_format),
+                item.dateTaken),fontSize = 24.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text =String.format(stringResource(id=R.string.weight_format),
+                item.weight),fontSize = 24.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text =String.format(stringResource(id=R.string.blood_pressure_format),
+                item.bpSystolic,item.bpDiastolic),
+                fontSize = 24.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text =String.format(stringResource(id=R.string.pulse_format),
+                item.pulse),fontSize = 24.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
+    }
+}
+@Composable
+fun ViewVitals(item: VitalsEntry)
+{
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+
+        ) {
         Column(
             modifier = Modifier
                 .padding(16.dp)
