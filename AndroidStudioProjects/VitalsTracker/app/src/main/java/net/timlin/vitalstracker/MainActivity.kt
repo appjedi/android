@@ -110,7 +110,6 @@ class MainActivity : ComponentActivity() {
                 }
                 composable("preferences") {
                     Preferences(dataStore)
-
                 }
             })
             BottomNavBar(navController)
