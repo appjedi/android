@@ -72,7 +72,6 @@ class MainActivity : ComponentActivity() {
     )
     @SuppressLint("ViewModelConstructorInComposable")
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         repository=  VitalsRepository(db.dao)
         setContent {
