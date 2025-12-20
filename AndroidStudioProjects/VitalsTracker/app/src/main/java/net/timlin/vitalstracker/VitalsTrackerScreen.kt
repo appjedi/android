@@ -22,6 +22,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -35,6 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -42,6 +44,7 @@ import net.timlin.vitalstracker.data.VitalsEntry
 import net.timlin.vitalstracker.model.VitalsItem
 import net.timlin.vitalstracker.network.VitalsRow
 import net.timlin.vitalstracker.ui.theme.VitalsViewModel
+
 
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -53,13 +56,19 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
     var message:String by  remember {mutableStateOf("")}
 
     // dateTaken, weight,pulse,bpDiastolic,bpSystolic,bloodSugar
-    var dateTaken:String by  remember {mutableStateOf("20251028")}
-    var weight:Float by  remember { mutableFloatStateOf(190f) }
-    var pulse:Int by  remember { mutableIntStateOf(60) }
-    var bpDiastolic:Int by  remember { mutableIntStateOf(130) }
-    var bpSystolic:Int by  remember { mutableIntStateOf(70) }
-    var bloodSugar:Float by  remember { mutableFloatStateOf(90f) }
+    var dateTaken:String by  remember {mutableStateOf("")}
+    var weight:String by  remember { mutableStateOf("") }
+    var pulse:Int by  remember { mutableIntStateOf(0) }
+    var bpDiastolic:Int by  remember { mutableIntStateOf(0) }
+    var bpSystolic:Int by  remember { mutableIntStateOf(0) }
+    var bloodSugar:Float by  remember { mutableFloatStateOf(0f) }
 
+    var dateTakenText by remember { mutableStateOf(dateTaken) }
+    var weightText by remember { mutableStateOf(weight) }
+    var pulseText by remember { mutableStateOf(pulse) }
+    var bpDiastolicText by remember { mutableStateOf(bpDiastolic) }
+    var bpSystolicText by remember { mutableStateOf(bpSystolic) }
+    var bloodSugarText by remember { mutableStateOf(bloodSugar) }
    // val vitalsServer:List<VitalsRow> =
 
     //viewModel.setList(vitalsList)
@@ -75,7 +84,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
         Text(text =message,
             fontSize = 36.sp)
         OutlinedTextField(
-            value = dateTaken,
+            value = dateTakenText,
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -86,7 +95,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                dateTaken=it
+                dateTakenText=it
 
             },
             label = { Text(stringResource(R.string.date_field_label)) },
@@ -96,7 +105,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
             )
         )
         OutlinedTextField(
-            value = weight.toString(),
+            value = weightText.toString(),
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -107,16 +116,15 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                weight=parse(it,0.0f)
+                weightText=it
+               //weightText=parse(it,0.0f)
             },
             label = { Text(stringResource(R.string.weight_field_label)) },
             isError =   isError,
-            keyboardOptions = KeyboardOptions.Default.copy(
-                imeAction = ImeAction.Done
-            )
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
         OutlinedTextField(
-            value = bpSystolic.toString(),
+            value = bpSystolicText.toString(),
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -127,7 +135,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                bpSystolic=parse(it,0)
+                bpSystolicText=parse(it,0)
 
             },
             label = { Text(stringResource(R.string.bp_systolic_field_label)) },
@@ -137,7 +145,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
             )
         )
         OutlinedTextField(
-            value = bpDiastolic.toString(),
+            value = bpDiastolicText.toString(),
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -148,7 +156,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                bpDiastolic=parse(it,0)
+                bpDiastolicText=parse(it,0)
 
             },
             label = { Text(stringResource(R.string.bp_diastolic_field_label)) },
@@ -158,7 +166,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
             )
         )
         OutlinedTextField(
-            value = pulse.toString(),
+            value = pulseText.toString(),
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -169,7 +177,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                pulse=parse(it,0)
+                pulseText=parse(it,0)
 
             },
             label = { Text(stringResource(R.string.pulse_field_label)) },
@@ -179,7 +187,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
             )
         )
         OutlinedTextField(
-            value = bloodSugar.toString(),
+            value = bloodSugarText.toString(),
             shape = MaterialTheme.shapes.large,
             modifier = Modifier
                 .fillMaxWidth()
@@ -190,7 +198,7 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
                 disabledContainerColor = MaterialTheme.colorScheme.surface,
             ),
             onValueChange = {
-                bloodSugar=parse(it,0.0f)
+                bloodSugarText=parse(it,0.0f)
 
             },
             label = { Text(stringResource(R.string.blood_sugar_field_label)) },
@@ -202,16 +210,15 @@ fun EnterVitalsScreen(viewModel: VitalsViewModel) {
         Button(
             onClick = {
                 val item: VitalsItem= VitalsItem()
-                item.dateTaken=dateTaken
-                item.bloodSugar=bloodSugar
-                item.pulse=pulse
-                item.weight=weight
-                item.bpDiastolic=bpDiastolic
-                item.bpSystolic=bpSystolic
+                item.dateTaken=dateTakenText
+                item.bloodSugar=bloodSugarText
+                item.pulse=pulseText
+                item.weight=weightText.toFloat()
+                item.bpDiastolic=bpDiastolicText
+                item.bpSystolic=bpSystolicText
                 isError=!viewModel.addVitals(item)
                 if (!isError) {
                     message="Saved"
-                   // currentVitals = null
                 } else {
                     isError = true
                 }
@@ -302,20 +309,21 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean, d
     ) {
         var showDetails: Boolean by remember {mutableStateOf(show)}
 
-        Row(
+        Column(
             modifier = Modifier
                 .padding(16.dp)
         ) {
-            Button(
-                onClick = {
-                    showDetails=!showDetails;
-                    setShow(idx)
-                    //viewModel.currentVitals=item
-                },
-                modifier = Modifier
-                 //   .align(Alignment.CenterHorizontally)
-                    .padding(bottom = 24.dp)
-            ) {
+            Row() {
+                Button(
+                    onClick = {
+                        showDetails = !showDetails;
+                        setShow(idx)
+                        //viewModel.currentVitals=item
+                    },
+                    modifier = Modifier
+                        //   .align(Alignment.CenterHorizontally)
+                        .padding(bottom = 24.dp)
+                ) {
 
                     Text(
                         text = item.toString(),
@@ -323,9 +331,10 @@ fun VitalsCard(item: VitalsRow, show:Boolean, idx:Int, setShow:(Int)->Boolean, d
                     )
 
 
-            }
-            IconButton(onClick = {  deleteVitals(item) }) {
-                Icon(Icons.Default.Delete, contentDescription = null)
+                }
+                IconButton(onClick = { deleteVitals(item) }) {
+                    Icon(Icons.Default.Delete, contentDescription = null)
+                }
             }
             if(showDetails)
             {
@@ -351,30 +360,33 @@ fun VitalsCard(item: VitalsEntry, show:Boolean, idx:Int, setShow:(Int)->Boolean,
     ) {
         var showDetails: Boolean by remember {mutableStateOf(show)}
 
-        Row(
+        Column(
             modifier = Modifier
                 .padding(16.dp)
         ) {
-            Button(
-                onClick = {
-                    showDetails=!showDetails;
-                    setShow(idx)
-                    //viewModel.currentVitals=item
-                },
-                modifier = Modifier
-                    //   .align(Alignment.CenterHorizontally)
-                    .padding(bottom = 24.dp)
-            ) {
+            Row()
+            {
+                Button(
+                    onClick = {
+                        showDetails = !showDetails;
+                        setShow(idx)
+                        //viewModel.currentVitals=item
+                    },
+                    modifier = Modifier
+                        //   .align(Alignment.CenterHorizontally)
+                        .padding(bottom = 24.dp)
+                ) {
 
-                Text(
-                    text = item.toString(),
-                    fontSize = 24.sp
-                )
+                    Text(
+                        text = item.toString(),
+                        fontSize = 24.sp
+                    )
 
 
-            }
-            IconButton(onClick = {  deleteVitals(item) }) {
-                Icon(Icons.Default.Delete, contentDescription = null)
+                }
+                IconButton(onClick = { deleteVitals(item) }) {
+                    Icon(Icons.Default.Delete, contentDescription = null)
+                }
             }
             if(showDetails)
             {

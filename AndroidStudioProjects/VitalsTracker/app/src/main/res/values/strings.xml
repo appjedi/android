@@ -9,6 +9,8 @@
 
     <string name="blood_sugar_field_label">Blood Sugar</string>
 
+    <string name="my_vitals">My Vitals</string>
+
     <string name="add_button_text">Add Vitals</string>
     <string name="vitals_list_text">View Vitals</string>
     <string name="welcome_instructions_text">Use this app to keep track of vitals you have seen.</string>
@@ -25,6 +27,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="preferences">Preferences</string>
+    <string name="username_text">Username</string>
+    <string name="username_email">Email</string>
+
+    <string name="use_local_cb">\nUse Local Database</string>
 
     <string name="title_vitals_history">Vitals History</string>
     <string name="dateTaken_format">Data Taken: %s</string>
@@ -32,5 +38,7 @@
     <string name="blood_pressure_format">Blood Pressure: %d/%d</string>
     <string name="pulse_format">Heart Rate: %d</string>
     <string name="blood_sugar_format">Blood Sugar: %f</string>
+
+
 
 </resources>

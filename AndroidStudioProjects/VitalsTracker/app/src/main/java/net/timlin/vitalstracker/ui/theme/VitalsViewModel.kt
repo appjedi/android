@@ -143,23 +143,7 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
 
                 viewModelScope.launch {
                     repository.delete(event.vitals) }
-                /*
-                viewModelScope.launch {
-                    try {
-                        val result= apiRepository.deleteVitals(event.vitals.id)
-                        result.onSuccess { vitals ->
-                            // vitals is List<VitalsRow>
-                        }.onFailure { error ->
-                            print(error.message ?: "Unknown error")
-                        }
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                        // _response.postValue(null) // Handle network error
-                    }
-                }
-                fetchServerVitals()
 
-                 */
             }
         }
     }
@@ -237,6 +221,38 @@ class VitalsViewModel(private val repository: net.timlin.vitalstracker.data.Vita
         }
         fetchServerVitals()
       //  onEvent(VitalsEvent.DeleteVitals(item))
+
+        return true;
+    }
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun sendToServer(item :VitalsEntry):Boolean
+    {
+        viewModelScope.launch {
+            try {
+                val vitalRow : VitalsRow=VitalsRow (
+                    id=0,
+                    item.dateTaken,
+                    item.weight,
+                    item.pulse,
+                    item.bpSystolic,
+                    item.bpDiastolic,
+                    item.bloodSugar
+                )
+                val result= apiRepository.postVitals(vitalRow)
+                result.onSuccess { vitals ->
+
+                    //vitals is List<VitalsRow>
+                }.onFailure { error ->
+                    print(error.message ?: "Unknown error")
+                }
+               // serverVitals=fetchServerVitals()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                // _response.postValue(null) // Handle network error
+            }
+        }
+        fetchServerVitals()
+        //  onEvent(VitalsEvent.DeleteVitals(item))
 
         return true;
     }

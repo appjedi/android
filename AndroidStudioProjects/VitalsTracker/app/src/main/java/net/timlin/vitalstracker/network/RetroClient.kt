@@ -12,11 +12,6 @@ object RetrofitClient {
     val moshi = Moshi.Builder()
         .add(KotlinJsonAdapterFactory())
         .build()
-
-    val locatService = Retrofit.Builder()
-        .baseUrl(LOCAL_URL)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .build().create(ApiService::class.java)
     val apiService = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create(moshi))

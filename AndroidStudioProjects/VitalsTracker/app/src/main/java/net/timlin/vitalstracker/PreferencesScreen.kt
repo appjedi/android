@@ -3,6 +3,7 @@ package net.timlin.vitalstracker
 
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -65,10 +66,14 @@ fun Preferences(dataStore: UserPreferences)
             singleLine = true
         )
         Spacer(modifier = Modifier.height(12.dp))
-        Checkbox(
-            checked=isLocalChecked,
-            onCheckedChange = {isLocalChecked = it}
-        )
+        Row() {
+            Checkbox(
+                checked = isLocalChecked,
+                onCheckedChange = { isLocalChecked = it }
+            )
+
+            Text("\nUse Local Database")
+        }
         Spacer(modifier = Modifier.height(12.dp))
         Button (
             onClick = {

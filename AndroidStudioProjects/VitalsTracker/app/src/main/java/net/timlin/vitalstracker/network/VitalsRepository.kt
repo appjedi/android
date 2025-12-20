@@ -1,10 +1,6 @@
 package net.timlin.vitalstracker.network
-
-import net.timlin.vitalstracker.model.VitalsItem
-
 class VitalsRepository (){
     var vitals:List<VitalsRow>?=null
-    //fun getVitals():List<VitalsRow>?{return this.vitals}
      suspend fun fetchVitals(): Result<List<VitalsRow>> {
         return try {
             val response = RetrofitClient.apiService.getVitals()

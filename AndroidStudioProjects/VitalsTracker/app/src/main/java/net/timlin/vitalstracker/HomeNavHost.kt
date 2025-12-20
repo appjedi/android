@@ -27,7 +27,7 @@ fun EnterHomeScreen( navController: NavController) {
             .padding(16.dp)
     ) {
         Spacer(modifier = Modifier.height(36.dp))
-        Image(painter = painterResource(id = R.drawable.vitals), contentDescription = "My Vitals")
+        Image(painter = painterResource(id = R.drawable.vitals), contentDescription = stringResource(R.string.my_vitals))
         Spacer(modifier = Modifier.height(36.dp))
 
         Text(text = stringResource(R.string.welcome),
